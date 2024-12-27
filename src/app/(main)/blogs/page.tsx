@@ -1,6 +1,13 @@
 import BlogCard from "@/components/blogs/blog-card";
 import { blogs } from "@/data/mock-data";
+import { Metadata } from "next";
 import React from "react";
+
+export const metadata: Metadata = {
+  title: "Blog App - Blogs",
+  description: "A blog app with Next.js",
+  keywords: ["blog", "news", "next.js"],
+};
 
 const BlogPage = () => {
   return (

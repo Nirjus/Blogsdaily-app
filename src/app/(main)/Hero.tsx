@@ -2,8 +2,10 @@ import React from "react";
 import Image from "next/image";
 import img from "@/assets/trainWithMountain.webp";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const Hero = () => {
+  const isLoggedIn = false;
   return (
     <div className=" w-full h-screen">
       <div className=" w-full h-screen relative">
@@ -31,9 +33,11 @@ const Hero = () => {
                 new things and share your knowledge with the world.
               </p>
               <div className=" w-full flex justify-center ">
-                <Button className="bg-white text-indigo-600 font-bold py-3 px-12 rounded-lg shadow-md hover:bg-gray-100 hover:scale-105 transition transform">
-                  Get Started
-                </Button>
+                <Link href={isLoggedIn ? "/blogs" : "/login"}>
+                  <Button className="bg-white text-indigo-600 font-bold py-3 px-12 rounded-lg shadow-md hover:bg-gray-100 hover:scale-105 transition transform">
+                    Get Started 👉
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { SendHorizonal } from "lucide-react";
+import { Mail, SendHorizonal } from "lucide-react";
 import React from "react";
 
 const Subscribe = () => {
@@ -12,7 +12,8 @@ const Subscribe = () => {
           put your email here
         </h1>
         <div className="m-auto my-10 flex justify-center items-center">
-          <div className=" bg-white w-96  p-5 rounded-l-md">
+          <div className=" bg-white w-96 flex justify-center items-center  p-5 rounded-l-md">
+            <Mail color="gray" className=" mr-3" />
             <input
               type="text"
               name=""

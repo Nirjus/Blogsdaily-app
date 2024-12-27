@@ -15,7 +15,7 @@ const About = () => {
           />
           <div className="flex-1 lg:w-[50%] md:w-[60%] p-5 bg-white shadow-lg rounded-2xl w-[90%] absolute bottom-0 left-0 ">
             <h1 className="  text-2xl font-bold text-center md:text-left md:text-3xl">
-              Are interested to grow business or side hustle?
+              Are interested to grow business 🚀 and side hustle?
             </h1>
             <p className="my-5 md:text-base italic text-gray-500 text-sm ">
               We are all about helping people grow and develop their skills,
