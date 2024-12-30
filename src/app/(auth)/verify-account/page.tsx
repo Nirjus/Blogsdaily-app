@@ -3,8 +3,8 @@ import React from "react";
 import VerifyAccountPage from "./verifyAccountPage";
 
 export const metadata: Metadata = {
-  title: "Blog App - Account Verify",
-  description: "A blog app with Next.js",
+  title: "Blogsdaily - Account Verify",
+  description: "A Blogsdaily with Next.js",
   keywords: ["blog", "news", "next.js"],
 };
 

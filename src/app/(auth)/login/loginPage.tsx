@@ -7,7 +7,7 @@ import { images } from "@/constants/imports";
 import Logo from "@/components/common/logo";
 import SocialAuth from "../_components/social-auth";
 
-const LoginPage = () => {
+const LoginPage: React.FC = () => {
   const [showPassword, setShowPassword] = useState(false);
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

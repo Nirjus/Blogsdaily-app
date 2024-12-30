@@ -4,6 +4,7 @@ import Link from "next/link";
 import SearchBox from "./Search-box";
 import { Button } from "../ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { auth } from "@/auth";
 
 const routes = [
   {
@@ -19,15 +20,15 @@ const routes = [
     url: "/contact",
   },
 ];
-const Header = () => {
-  const isLoggedIn = false;
+const Header = async () => {
+  const session = await auth();
 
   return (
     <div className=" w-full h-20 bg-gray-100 shadow-md fixed top-0 px-4 left-0 z-50">
       <nav className="w-full min-h-full flex justify-between items-center h-20 max-w-7xl m-auto ">
         {/* Blog logo */}
         <Logo />
-        {isLoggedIn ? (
+        {session ? (
           <div className=" flex justify-center items-center gap-10">
             {/* Search box */}
             <SearchBox />

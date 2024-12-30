@@ -3,8 +3,8 @@ import { Metadata } from "next";
 import ForgotPasswordPage from "./ForgotPasswordPage";
 
 export const metadata: Metadata = {
-  title: "Blog App - forgot password",
-  description: "A blog app with Next.js",
+  title: "Blogsdaily - forgot password",
+  description: "A Blogsdaily with Next.js",
   keywords: ["blog", "news", "next.js"],
 };
 

@@ -3,8 +3,8 @@ import React from "react";
 import RegisterPage from "./registerPage";
 
 export const metadata: Metadata = {
-  title: "Blog App - Register",
-  description: "A blog app with Next.js",
+  title: "Blogsdaily - Register",
+  description: "A Blogsdaily with Next.js",
   keywords: ["blog", "news", "next.js"],
 };
 

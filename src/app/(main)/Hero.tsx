@@ -22,7 +22,7 @@ const Hero = () => {
               <h1 className="text-center text-4xl md:text-6xl font-bold text-white">
                 Welcome to our <br />
                 <span className="text-stone-50 underline decoration-2 decoration-yellow-400">
-                  Blog App
+                  Blogsdaily
                 </span>
               </h1>
               <br />

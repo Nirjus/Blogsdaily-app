@@ -10,7 +10,7 @@ function Logo() {
       <div className="flex items-center justify-center w-30 h-full">
         <Image src={img} alt="logo" height={50} width={50} />
         <span className="font-bold text-2xl underline italic decoration-2 decoration-yellow-400">
-          Blog App
+          Blogsdaily
         </span>
       </div>
     </Link>

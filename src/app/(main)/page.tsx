@@ -6,8 +6,8 @@ import ResentPost from "./resent-posts";
 import Subscribe from "./subscribe";
 
 export const metadata: Metadata = {
-  title: "Blog App",
-  description: "A blog app with Next.js",
+  title: "Blogsdaily",
+  description: "A Blogsdaily with Next.js",
   keywords: ["blog", "news", "next.js"],
 };
 
