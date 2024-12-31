@@ -1,20 +1,13 @@
 "use client";
-import React, { useState } from "react";
-import { Eye, EyeOff, Lock, Mail } from "lucide-react";
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { images } from "@/constants/imports";
 import Logo from "@/components/common/logo";
 import SocialAuth from "../_components/social-auth";
+import LoginComponent from "./_components/formComponent";
 
 const LoginPage: React.FC = () => {
-  const [showPassword, setShowPassword] = useState(false);
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const formData = new FormData(e.target as HTMLFormElement);
-    const data = Object.fromEntries(formData.entries());
-    console.log(data);
-  };
   return (
     <div>
       <div className=" flex max-md:flex-col justify-center items-center w-full min-h-screen ">
@@ -40,57 +33,13 @@ const LoginPage: React.FC = () => {
               <div className=" border border-gray-300 w-full" />
             </div>
           </div>
-          <form
-            className=" w-full max-w-md m-auto mt-5 "
-            onSubmit={handleSubmit}
-          >
-            <div className=" flex mb-4 border-2 border-stone-300 space-x-4 bg-white p-3 px-4 rounded-lg items-center ">
-              <Mail color="gray" size={20} />
-              <input
-                type="email"
-                name="email"
-                placeholder="Enter email"
-                className=" outline-none w-full"
-              />
-            </div>
-            <div className=" flex mb-4 border-2 border-stone-300 space-x-4 bg-white p-3 px-4 rounded-lg items-center ">
-              <Lock color="gray" size={20} />
-              <input
-                type={showPassword ? "text" : "password"}
-                name="password"
-                placeholder="Enter password"
-                className=" outline-none w-full"
-              />
-              <button
-                type="button"
-                onClick={() => setShowPassword(!showPassword)}
-              >
-                {showPassword ? (
-                  <Eye size={20} color="gray" />
-                ) : (
-                  <EyeOff size={20} color="gray" />
-                )}
-              </button>
-            </div>
-            <div className=" px-1 flex justify-between items-center mb-5">
-              <span className=" flex  justify-center items-center">
-                <input type="checkbox" className="mr-2 p-1" />
-                <p className=" text-sm">Remember me</p>
-              </span>
-              <p className=" font-semibold text-indigo-500 text-sm ">
-                <Link href={"/forgot-password"}>Forgot password?</Link>
-              </p>
-            </div>
-            <button className=" bg-indigo-500 active:bg-indigo-400 text-white p-2 rounded-lg w-full ">
-              Login
-            </button>
-            <p className=" text-center mt-6 text-gray-500 text-sm ">
-              Dont have account?{" "}
-              <span className=" text-indigo-500 font-semibold">
-                <Link href={"/register"}>Create an account?</Link>
-              </span>
-            </p>
-          </form>
+          <LoginComponent />
+          <p className=" text-center mt-6 text-gray-500 text-sm ">
+            Dont have account?{" "}
+            <span className=" text-indigo-500 font-semibold">
+              <Link href={"/register"}>Create an account?</Link>
+            </span>
+          </p>
         </div>
         <div className=" w-full md:w-[50%] relative flex-shrink-0">
           <Image

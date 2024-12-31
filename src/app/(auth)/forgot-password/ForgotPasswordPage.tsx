@@ -2,17 +2,11 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Mail } from "lucide-react";
 import Logo from "@/components/common/logo";
 import { images } from "@/constants/imports";
+import ForgotPassForm from "./formComponent";
 
 export default function ForgotPasswordPage() {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const formData = new FormData(e.target as HTMLFormElement);
-    const data = Object.fromEntries(formData.entries());
-    console.log(data);
-  };
   return (
     <div>
       <div className=" flex max-md:flex-col justify-center items-center w-full min-h-screen ">
@@ -35,30 +29,18 @@ export default function ForgotPasswordPage() {
               </ul>
             </blockquote>
           </div>
-          <form
-            className=" w-full max-w-md m-auto mt-5 "
-            onSubmit={handleSubmit}
-          >
-            <div className=" flex mb-4 border-2 border-stone-300 space-x-4 bg-white p-3 px-4 rounded-lg items-center ">
-              <Mail color="gray" size={20} />
-              <input
-                type="email"
-                name="email"
-                placeholder="Enter email"
-                className=" outline-none w-full"
-              />
-            </div>
-
-            <button className=" bg-indigo-500 active:bg-indigo-400 text-white p-2 rounded-lg w-full ">
-              Send verification link
-            </button>
-            <p className=" text-center mt-6 text-gray-500 text-sm ">
-              go back to{" "}
-              <span className=" text-indigo-500 font-semibold">
-                <Link href={"/login"}>Sign In</Link>
-              </span>
-            </p>
-          </form>
+          <ForgotPassForm />
+          <div className=" flex items-center max-w-md m-auto space-x-3 my-10">
+            <div className=" border border-gray-300 w-full" />
+            <p className="whitespace-nowrap text-sm text-gray-500">or</p>
+            <div className=" border border-gray-300 w-full" />
+          </div>
+          <p className=" text-center mt-6 text-gray-500 text-sm ">
+            go back to{" "}
+            <span className=" text-indigo-500 font-semibold">
+              <Link href={"/login"}>Sign In</Link>
+            </span>
+          </p>
         </div>
         <div className=" w-full md:w-[50%] relative flex-shrink-0">
           <Image

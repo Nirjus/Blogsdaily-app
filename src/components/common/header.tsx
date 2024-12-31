@@ -21,8 +21,8 @@ const routes = [
   },
 ];
 const Header = async () => {
-  const session = await auth();
-
+  const sessions = await auth();
+  const session = true;
   return (
     <div className=" w-full h-20 bg-gray-100 shadow-md fixed top-0 px-4 left-0 z-50">
       <nav className="w-full min-h-full flex justify-between items-center h-20 max-w-7xl m-auto ">
